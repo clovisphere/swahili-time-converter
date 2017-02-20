@@ -26,12 +26,12 @@ class Converter {
     public function convert($time) {
         $str = '';
         
-        if (is_valid_time($time)) {
+        if ($this->is_valid_time($time)) {
             $temp = explode(':', $time);
             $seconds = '';
             if (count($temp) > 2) { $second = ':' .$temp[2];} // if there was any second passed
             // the magic happens here
-            $result = to_swahili($temp[0]);
+            $result = $this->to_swahili($temp[0]);
             // build the swahili equivalent.
             $str = $result[0] .':' .$temp[1] .$second .", {$result[1]}";
         }
@@ -49,19 +49,19 @@ class Converter {
         if ($hour >= 19 && $hour <= 24) {
             array_push(
                 $result, 
-                ($hour - $upper), 
-                $part_of_the_day[0]
+                ($hour - $this->upper), 
+                $this->part_of_the_day[0]
             );
         }else {
-            $temp = (($hour - $lowe) < 1)?($hour + $lower):($hour - $lower);
+            $temp = (($hour - $this->lower) < 1)?($hour + $this->lower):($hour - $this->lower);
             array_push($result, $temp);
             // get part of the day
             if ($hour < 19 && $hour >= 12) {
-                array_push($result, $part_of_the_day[2]);
+                array_push($result, $this->part_of_the_day[2]);
             }else if ($hour < 12 && $hour >= 5) {
-                array_push($result, $part_of_the_day[1]);
+                array_push($result, $this->part_of_the_day[1]);
             }else {
-                array_push($result, $part_of_the_day[0]);
+                array_push($result, $this->part_of_the_day[0]);
             }
         }
         return $result;
