@@ -5,7 +5,7 @@
  */
 class Converter {
     // swahili equivalent to 'night', 'morning', and 'afternoon/ during the day'
-    private $part_of_the_day = array('Usiku', 'Asubuhi', 'Mschana');
+    private $part_of_the_day = array('Usiku', 'Asubuhi', 'Mchana');
     // the below values are used for calculation purposes
     // to distinguish between the different part of the day in Swahili.
     private $lower = 6;
