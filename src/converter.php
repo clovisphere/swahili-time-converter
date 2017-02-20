@@ -14,7 +14,7 @@ class Converter {
     /**
      * class constructor
      */
-    public __constructor() {
+    public __construct() {
         // TODO - nothing 
     }
     
