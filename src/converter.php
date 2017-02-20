@@ -3,7 +3,7 @@
 /**
  * European-Swahili Time converter.
  */
-public class Converter {
+class Converter {
     // swahili equivalent to 'night', 'morning', and 'afternoon/ during the day'
     private $part_of_the_day = array('Usiku', 'Asubuhi', 'Mschana');
     // the below values are used for calculation purposes
