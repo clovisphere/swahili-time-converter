@@ -78,3 +78,9 @@ public class Converter {
         return preg_match($pattern, $time);
     }
 }
+
+## -- TO BE REMOVED -- ##
+# (only used for test purposes) #
+$european_time = '12:00:00';
+$t = Converter();
+echo "Time - '{$european_time}' - is said/read: '" .$t.convert($european_time) ."' in Swahili\n";
