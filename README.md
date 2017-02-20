@@ -1,2 +1,3 @@
 # swahili-time-converter
-European/English time to its Swahili equivalent
+
+Simple class that convert given European time to its Swahili equivalent.
