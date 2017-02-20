@@ -1,3 +1,5 @@
+<?php
+
 public class Converter {
     /**
      * class constructor
